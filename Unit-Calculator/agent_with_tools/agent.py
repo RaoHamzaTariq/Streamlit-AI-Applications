@@ -7,6 +7,7 @@ from langgraph.prebuilt import ToolNode, tools_condition
 from agent_with_tools.tools import Tools
 from langchain_core.messages import HumanMessage
 
+
 load_dotenv()
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
@@ -40,7 +41,7 @@ graph_builder.add_node("tools", ToolNode(unit_converting_tools))
 
 graph_builder.add_edge(START, "tool_calling_agent")
 graph_builder.add_conditional_edges("tool_calling_agent", tools_condition)
-graph_builder.add_edge("tools", END) 
+graph_builder.add_edge("tools", "tool_calling_agent") 
 graph : CompiledStateGraph = graph_builder.compile()
 
 messages = [HumanMessage(content="Convert 10 kg to pounds")]
