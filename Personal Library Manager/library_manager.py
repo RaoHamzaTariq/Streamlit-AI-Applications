@@ -83,11 +83,13 @@ def view_library_stats(library):
     total_books = len(library)
     read_books = len([book for book in library if book["read_status"]=="read"])
     unread_books = total_books - read_books
+    percentage_read = read_books * 100 / total_books if total_books > 0 else 0
 
     print(f"\nLibrary Stats:")
     print(f"Total books: {total_books}")
     print(f"Books read: {read_books}")
     print(f"Books unread: {unread_books}")
+    print(f"Percentage read: {percentage_read:.2f}%")
 
 def list_books(library):
     if not library:
