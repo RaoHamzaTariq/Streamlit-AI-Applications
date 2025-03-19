@@ -16,7 +16,7 @@ def add_book(library, next_book_id):
         published_year = int(input("Enter published year: ").strip())
     except ValueError:
         print("Invalid year! Please enter a number.")
-        return library, next_book_id
+        # return library, next_book_id
 
     genre = input("Enter book genre: ").strip()
     read_status = input("Have you read it? (read/unread): ").strip().lower()
@@ -26,6 +26,7 @@ def add_book(library, next_book_id):
         "title": title,
         "author": author,
         "published_year": published_year,
+
         "genre": genre,
         "read_status": read_status
     }

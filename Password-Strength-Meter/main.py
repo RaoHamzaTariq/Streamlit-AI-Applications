@@ -31,7 +31,7 @@ if st.button("Check Password Strength"):
     else:
         st.error("Please enter a password to analyze.")
 
-# Generate a strong password
+# Generate a strong password    
 if st.button("Generate Strong Password"):
     strong_password = generate_strong_password()
     st.write("### Generated Strong Password:")
