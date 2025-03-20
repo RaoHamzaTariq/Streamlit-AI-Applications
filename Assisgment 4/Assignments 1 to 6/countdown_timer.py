@@ -4,7 +4,7 @@ def countdown_timer(seconds):
     """A countdown timer that prints the remaining time."""
 
     try:
-        seconds = int(seconds)  # Ensure seconds is an integer
+        seconds = int(seconds)  
         if seconds < 0:
             print("Please enter a positive number of seconds.")
             return
@@ -12,11 +12,11 @@ def countdown_timer(seconds):
         while seconds > 0:
             minutes, secs = divmod(seconds, 60)
             timer = '{:02d}:{:02d}'.format(minutes, secs)
-            print(timer, end="\r")  # Use '\r' to overwrite the same line
+            print(timer, end="\r")  
             time.sleep(1)
             seconds -= 1
 
-        print("Time's up!      ") #Add spaces to overwrite previous timer
+        print("Time's up!      ") 
 
     except ValueError:
         print("Invalid input. Please enter a number.")
@@ -26,7 +26,7 @@ def main():
     try:
         seconds = input("Enter the countdown time in seconds: ")
         countdown_timer(seconds)
-    except KeyboardInterrupt: #Handle ctrl+c
+    except KeyboardInterrupt: 
         print("\nTimer interrupted.")
 
 if __name__ == "__main__":

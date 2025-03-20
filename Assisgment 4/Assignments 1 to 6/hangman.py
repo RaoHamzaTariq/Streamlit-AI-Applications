@@ -19,7 +19,7 @@ def hangman():
     """Plays the hangman game."""
     word = choose_word()
     guessed_letters = []
-    attempts = 6  # Number of allowed attempts
+    attempts = 6  
 
     print("Welcome to Hangman!")
     print(display_word(word, guessed_letters))

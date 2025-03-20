@@ -1,6 +1,6 @@
 import random
 
-def number_guess_game():
+def number_guess_game_user():
 
     secret_number = random.randint(1, 10)
     attempts = 0
@@ -25,4 +25,4 @@ def number_guess_game():
             print("Invalid input. Please enter a number.")
 
 if __name__ == "__main__":
-    number_guess_game()
+    number_guess_game_user()
