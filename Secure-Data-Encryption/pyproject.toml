@@ -1,0 +1,16 @@
+[project]
+name = "secure-data-encryption"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "cryptography>=44.0.2",
+    "langchain>=0.3.20",
+    "langchain-community>=0.3.19",
+    "langchain-core>=0.3.41",
+    "langchain-google-genai>=2.0.11",
+    "langgraph>=0.3.5",
+    "python-dotenv>=1.0.1",
+    "streamlit>=1.43.0",
+]
